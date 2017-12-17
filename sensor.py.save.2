@@ -11,7 +11,6 @@ def data():
 	GPIO.setmode(GPIO.BOARD)
 	GPIO.setwarnings(False)
 	GPIO.setup(18,GPIO.OUT)
-	GPIO.setup(22,GPIO.OUT)
 	#print "LED on"
 	#GPIO.output(18,GPIO.HIGH)
 	#time.sleep(1)
@@ -44,12 +43,9 @@ def data():
         try:
                 # Main loop
                 while True:
-			GPIO.output(18,GPIO.LOW)
+			git config --global user.email "you@example.com"GPIO.output(18,GPIO.LOW)
                         print rc_time(pin_to_circuit)
                         data = db.data.insert_one({'Data' : rc_time(pin_to_circuit)})
-			GPIO.output(22,GPIO.HIGH)
-			time.sleep(1)
-			GPIO.output(22,GPIO.LOW)
         except KeyboardInterrupt:
                 pass
         finally:
